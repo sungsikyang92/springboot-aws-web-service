@@ -21,3 +21,6 @@ public class Application {
          */
     }
 }
+/*
+    AWS EC2 하는중
+ */
