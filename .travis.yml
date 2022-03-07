@@ -40,7 +40,7 @@ deploy:
     application: springboot-aws-web-service
     deployment_group: sbaws-group
     region: ap-northeast-2
-    wait_until-deployed: true
+    wait-until-deployed: true
 
 # CI 실행 완료 시 메일로 알람
 notifications:
