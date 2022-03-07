@@ -36,10 +36,9 @@ deploy:
     secret_access_key: $AWS_SECRET_KEY # Travis repo settings에 설정된 값
     bucket: sbaws-build
     key: freelec-springboot2-webservice.zip
-
     bundle_type: zip
-    application: freelec-springboot2-webservice
-    deployment_group: freelec-springboot2-webservice
+    application: springboot-aws-web-service
+    deployment_group: sbaws-group
     region: ap-northeast-2
     wait_until-deployed: true
 
