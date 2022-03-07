@@ -17,7 +17,7 @@ script: "./gradlew clean build"
 
 before_deploy:
   - zip - r /Users/ssiky/IdeaProjects/springboot-aws-web-service *
-  - mkdir -p deploy
+  - mkdir -p /Users/ssiky/IdeaProjects/deploy
   - mv /Users/ssiky/IdeaProjects/springboot-aws-web-service.zip /Users/ssiky/IdeaProjects/deploy/springboot-aws-web-service.zip
 
 deploy:
