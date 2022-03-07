@@ -16,14 +16,14 @@ script: "./gradlew clean build"
 
 
 before_deploy:
+  - zip - r /Users/ssiky/IdeaProjects/springboot-aws-web-service *
   - mkdir -p deploy
-  - zip - r springboot-aws-web-service *
   - mv springboot-aws-web-service.zip deploy/springboot-aws-web-service.zip
 
 deploy:
   - provider: s3
-    access_key_id: AKIA4WBOXOKK6AUNOTEM
-    secret_access_key: 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
+    access_key_id: $AWS_ACCESS_KEY # Travis repo settings에 설정된 값
+    secret_access_key: $AWS_SECRET_KEY # Travis repo settings에 설정된 값
     bucket: sbaws-build
     region: ap-northeast-2
     skip_cleanup: true
